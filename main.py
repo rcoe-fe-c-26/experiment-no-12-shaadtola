@@ -6,3 +6,12 @@
 
 print("--- Extracting Words from Text File ---\n")
 
+num = int(input("Enter Length of Words:"))
+result = []
+with open("story.txt","r") as f:
+    content = f.read().split()
+    for i in content:
+        if len(i) == num:
+            result.append(i)
+            print(f"Words with length {num} are:",i) 
+
